@@ -45,7 +45,45 @@
   }
   </script>
   <meta name="robots" content="index, follow">
-  <title>Independent SiriusXM Support – Not Affiliated</title>
+  <!-- Custom CSS for Animations and Slider -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    /* Slider Styles */
+    .slider {
+      position: relative;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .prev { left: 1rem; }
+    .next { right: 1rem; }
+  </style>
 </head>
 <body class="bg-light text-gray-800 font-sans antialiased">
 
@@ -64,16 +102,19 @@
   <!-- Hero -->
   <section class="bg-gradient-to-br from-primary to-primaryDark text-white py-16 md:py-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6 animate-fade-in">
         Expert Independent Help for Your SiriusXM Radio & App
       </h2>
-      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-        Facing activation problems, billing questions, app glitches, or signal issues? Our experienced team provides fast, friendly support — completely independent from SiriusXM.
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in" style="animation-delay: 0.3s;">
+        Imagine tuning into your favorite station only to hit a snag with signal loss or app glitches. We've been there too, and that's why our team is passionate about helping you get back to enjoying crystal-clear music, sports, and talk shows without the hassle. As an independent support service, we focus on real solutions tailored to your needs.
       </p>
-      <p class="text-lg mb-10 font-medium italic">We are NOT affiliated with, endorsed by, or connected to SiriusXM Satellite Radio Inc.</p>
+      <p class="text-xl mb-10 opacity-90 animate-fade-in" style="animation-delay: 0.6s;">
+        Whether you're dealing with billing confusion that feels like deciphering a puzzle or activation issues that interrupt your road trip vibes, our friendly experts are here to guide you step by step. We understand how frustrating tech troubles can be, especially when you're just trying to unwind with some tunes.
+      </p>
+      <p class="text-lg mb-10 font-medium italic animate-fade-in" style="animation-delay: 0.9s;">We are NOT affiliated with, endorsed by, or connected to SiriusXM Satellite Radio Inc. Our advice comes from years of hands-on experience helping folks like you.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-6">
         <a href="tel:+18336118371"
-           class="inline-flex items-center justify-center bg-white text-primary font-bold text-lg px-10 py-5 rounded-xl shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1">
+           class="inline-flex items-center justify-center bg-white text-primary font-bold text-lg px-10 py-5 rounded-xl shadow-lg hover:bg-gray-100 transition transform hover:-translate-y-1 animate-fade-in" style="animation-delay: 1.2s;">
           <span class="mr-3 text-2xl">📞 Call Now</span> +1 (833) 611-8371
         </a>
       </div>
@@ -83,89 +124,138 @@
   <!-- Main Content -->
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
 
-    <!-- About Us -->
+    <!-- About Us with Slider -->
     <section id="about" class="scroll-mt-20">
-      <h2 class="text-4xl font-bold text-primary text-center mb-10">About Our Independent Support Service</h2>
-      <div class="prose prose-lg max-w-none">
-        <p>We are a dedicated third-party support provider helping SiriusXM users resolve common technical and account-related issues since 2020.</p>
-        <p>Our team of experienced support specialists has assisted thousands of customers with everything from radio activation and signal troubleshooting to app setup, billing disputes, and subscription management.</p>
-        <p><strong>Important:</strong> This is an independent service. We are not part of SiriusXM, Sirius XM Holdings Inc., or any official SiriusXM entity. We do not have access to official SiriusXM systems and provide guidance based on publicly available information and common troubleshooting practices.</p>
+      <h2 class="text-4xl font-bold text-primary text-center mb-10 animate-fade-in">About Our Independent Support Service</h2>
+      <div class="prose prose-lg max-w-none mb-8 animate-fade-in" style="animation-delay: 0.3s;">
+        <p>Hey there! We're a small but dedicated team of tech enthusiasts who started this service back in 2020 because we saw how many people were struggling with their SiriusXM setups. Picture this: one of our founders was on a cross-country drive when his radio suddenly went silent – no signal, no music, just frustration. That moment sparked the idea for a support service that's truly independent, focusing on practical, human-centered help without the corporate red tape.</p>
+        <p>Over the years, we've grown by listening to real stories from users like you. We've helped busy parents fix app issues so their kids can listen to stories on long drives, assisted music lovers in optimizing their home setups for the best sound quality, and even guided seniors through account management with patience and clear explanations. Our approach is simple: treat every call like we're helping a friend.</p>
+        <p>We believe in transparency – that's why we always remind you that we're not part of SiriusXM. We don't have insider access, but we do have a wealth of knowledge from troubleshooting thousands of cases. From signal tweaks that turn weak reception into strong vibes to billing tips that save you time and money, we're here to make your SiriusXM experience enjoyable again.</p>
+        <p><strong>Important:</strong> This is an independent service. We are not part of SiriusXM, Sirius XM Holdings Inc., or any official SiriusXM entity. We do not have access to official SiriusXM systems and provide guidance based on publicly available information, common troubleshooting practices, and our collective expertise gathered from real-world scenarios.</p>
       </div>
+      <!-- Slider for About Us -->
+      <div class="slider mb-8 animate-fade-in" style="animation-delay: 0.6s;">
+        <div class="slides">
+          <div class="slide">
+            <h3 class="text-2xl font-semibold text-primary mb-4">Our Journey</h3>
+            <p>Started from a personal frustration on the road, we've evolved into a trusted helper for SiriusXM users nationwide. Every team member brings their own story of loving radio and hating tech glitches.</p>
+          </div>
+          <div class="slide">
+            <h3 class="text-2xl font-semibold text-primary mb-4">Meet the Team</h3>
+            <p>From former radio DJs to tech wizards, our diverse group shares one goal: making your listening experience seamless and fun. We're real people who care about your tunes!</p>
+          </div>
+          <div class="slide">
+            <h3 class="text-2xl font-semibold text-primary mb-4">Our Values</h3>
+            <p>Honesty, empathy, and expertise drive us. We promise straightforward advice, no upsells, just genuine help to get you back to what you love.</p>
+          </div>
+        </div>
+        <button class="slider-nav prev">&#10094;</button>
+        <button class="slider-nav next">&#10095;</button>
+      </div>
+      <script>
+        const slider = document.querySelector('.slider');
+        const slides = slider.querySelector('.slides');
+        const slideCount = slides.children.length;
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        slider.querySelector('.next').addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % slideCount;
+          showSlide(currentIndex);
+        });
+
+        slider.querySelector('.prev').addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+          showSlide(currentIndex);
+        });
+      </script>
     </section>
 
     <!-- Services -->
     <section id="services" class="scroll-mt-20">
-      <h2 class="text-4xl font-bold text-primary text-center mb-10">Services We Provide</h2>
+      <h2 class="text-4xl font-bold text-primary text-center mb-10 animate-fade-in">Services We Provide</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition animate-fade-in" style="animation-delay: 0.3s;">
           <h3 class="text-2xl font-semibold text-primary mb-4">Radio Activation & Signal Help</h3>
-          <p>Activate new radios, fix weak signal issues, antenna placement advice, vehicle & home setup guidance.</p>
+          <p>Remember that excitement of getting a new radio? We make activation a breeze, walking you through every step. For signal issues, we'll share tips like antenna adjustments that we've seen work wonders in real homes and cars. Plus, advice on avoiding common pitfalls like interference from buildings or weather.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition animate-fade-in" style="animation-delay: 0.6s;">
           <h3 class="text-2xl font-semibold text-primary mb-4">Account & Login Support</h3>
-          <p>Password resets, account recovery, multi-device management, profile updates.</p>
+          <p>Forgotten passwords can ruin your day – we've all been locked out! Our team helps with resets, recoveries, and setting up secure profiles. We'll even guide you on managing family accounts so everyone gets their favorite channels without stepping on toes.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition animate-fade-in" style="animation-delay: 0.9s;">
           <h3 class="text-2xl font-semibold text-primary mb-4">Billing & Subscription Questions</h3>
-          <p>Understand charges, update payment methods, handle disputes, explain promotions.</p>
+          <p>Billing surprises? Not on our watch. We explain charges in plain English, help update payments, and share insights on promotions based on what we've seen help others save. Think of us as your friendly advisor navigating the subscription maze.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition animate-fade-in" style="animation-delay: 1.2s;">
           <h3 class="text-2xl font-semibold text-primary mb-4">SiriusXM App Troubleshooting</h3>
-          <p>iOS/Android app installation, streaming problems, login errors, offline mode help.</p>
+          <p>Apps should make life easier, not harder. From installation hiccups on your phone to streaming lags, we troubleshoot with patience, drawing from countless user stories to find quick fixes that get you back to mobile listening.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition animate-fade-in" style="animation-delay: 1.5s;">
           <h3 class="text-2xl font-semibold text-primary mb-4">General Technical Guidance</h3>
-          <p>Software updates, channel lineup issues, device compatibility, basic diagnostics.</p>
+          <p>Tech glitches don't discriminate – whether it's software updates gone wrong or channel lineup confusion, we're here with creative solutions. We've helped users integrate with smart homes, turning ordinary setups into personalized entertainment hubs.</p>
         </div>
-        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition animate-fade-in" style="animation-delay: 1.8s;">
           <h3 class="text-2xl font-semibold text-primary mb-4">Custom Setup Assistance</h3>
-          <p>Integrating with car stereos, smart home systems, multiple listeners, family plans.</p>
+          <p>Want to sync with your car stereo or create a multi-room system? We love getting creative, sharing setups that blend SiriusXM with your lifestyle, like voice control integrations or family sharing plans that keep everyone happy.</p>
         </div>
       </div>
     </section>
 
     <!-- Expertise / Why Choose Us -->
-    <section id="expertise" class="scroll-mt-20 bg-white rounded-2xl shadow-lg p-10 md:p-16">
+    <section id="expertise" class="scroll-mt-20 bg-white rounded-2xl shadow-lg p-10 md:p-16 animate-fade-in">
       <h2 class="text-4xl font-bold text-primary text-center mb-10">Why Choose Our Support?</h2>
       <div class="grid md:grid-cols-2 gap-10">
         <div>
           <ul class="space-y-6 text-lg">
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Over 5 years helping SiriusXM users</li>
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>High first-call resolution rate</li>
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>24/7 phone support availability</li>
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Clear, patient explanations</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Over 5 years of hands-on experience, turning frustrated users into happy listeners with stories that inspire our daily work.</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>High first-call resolution because we listen deeply and apply lessons from real-life scenarios we've encountered.</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>24/7 availability – life doesn't pause for tech issues, and neither do we, always ready with a friendly voice.</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Clear, patient explanations that make complex fixes feel simple, like chatting with a knowledgeable neighbor.</li>
           </ul>
         </div>
         <div>
           <ul class="space-y-6 text-lg">
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Strong focus on user privacy & security</li>
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Transparent pricing & no hidden fees</li>
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Fair refund policy when applicable</li>
-            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>100% independent – no official affiliation</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Strong focus on privacy & security, treating your info like our own in this digital age.</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Transparent pricing with no surprises – we explain costs upfront, building trust from the start.</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>Fair refund policy because we stand by our service and want you truly satisfied.</li>
+            <li class="flex items-start"><span class="text-accent text-2xl mr-4">✓</span>100% independent – our advice is unbiased, drawn from community insights and practical know-how.</li>
           </ul>
         </div>
       </div>
+      <p class="mt-8 text-lg text-center">What sets us apart? It's the human touch – we remember names, follow up on stories, and celebrate when you tell us your radio is rocking again!</p>
     </section>
 
     <!-- FAQ -->
     <section id="faq" class="scroll-mt-20">
-      <h2 class="text-4xl font-bold text-primary text-center mb-10">Frequently Asked Questions</h2>
+      <h2 class="text-4xl font-bold text-primary text-center mb-10 animate-fade-in">Frequently Asked Questions</h2>
       <div class="space-y-6">
-        <details class="bg-white rounded-xl shadow-md">
+        <details class="bg-white rounded-xl shadow-md animate-fade-in" style="animation-delay: 0.3s;">
           <summary class="p-6 font-semibold text-lg cursor-pointer">Are you officially part of SiriusXM?</summary>
-          <div class="px-6 pb-6">No. We are a completely independent third-party support service. We are not affiliated with, owned by, or endorsed by SiriusXM.</div>
+          <div class="px-6 pb-6">No, absolutely not. We're like that helpful friend who's great with tech but not tied to any company. Independent means we give honest advice without agendas.</div>
         </details>
-        <details class="bg-white rounded-xl shadow-md">
+        <details class="bg-white rounded-xl shadow-md animate-fade-in" style="animation-delay: 0.6s;">
           <summary class="p-6 font-semibold text-lg cursor-pointer">What kind of issues can you help with?</summary>
-          <div class="px-6 pb-6">We assist with activation, signal problems, app issues, account access, billing questions, and general troubleshooting based on common user experiences and public resources.</div>
+          <div class="px-6 pb-6">From everyday annoyances like app crashes during your commute to deeper dives into billing mysteries, we cover it all with tips honed from real user tales.</div>
         </details>
-        <details class="bg-white rounded-xl shadow-md">
+        <details class="bg-white rounded-xl shadow-md animate-fade-in" style="animation-delay: 0.9s;">
           <summary class="p-6 font-semibold text-lg cursor-pointer">How much does your support cost?</summary>
-          <div class="px-6 pb-6">Pricing depends on the complexity of the issue. Please call for a quote. We aim to be transparent about costs before beginning any paid assistance.</div>
+          <div class="px-6 pb-6">It varies based on the puzzle we're solving together. We chat about it upfront, ensuring it's fair and fits your needs – no one-size-fits-all here.</div>
         </details>
-        <details class="bg-white rounded-xl shadow-md">
+        <details class="bg-white rounded-xl shadow-md animate-fade-in" style="animation-delay: 1.2s;">
           <summary class="p-6 font-semibold text-lg cursor-pointer">Do you offer refunds?</summary>
-          <div class="px-6 pb-6">Yes — see our Refunds Policy section below for full details. We want you to be satisfied with our service.</div>
+          <div class="px-6 pb-6">Yes, because we're human too and understand not every fix is perfect. Check our policy – we're committed to making it right.</div>
+        </details>
+        <details class="bg-white rounded-xl shadow-md animate-fade-in" style="animation-delay: 1.5s;">
+          <summary class="p-6 font-semibold text-lg cursor-pointer">How do you ensure privacy?</summary>
+          <div class="px-6 pb-6">We handle your details with the care we'd want for our own families – secure, minimal collection, and never shared without reason.</div>
+        </details>
+        <details class="bg-white rounded-xl shadow-md animate-fade-in" style="animation-delay: 1.8s;">
+          <summary class="p-6 font-semibold text-lg cursor-pointer">Can you access my SiriusXM account?</summary>
+          <div class="px-6 pb-6">As independents, we guide you on what to do, but we can't log in for you. It's like teaching you to fish – empowering and safe!</div>
         </details>
       </div>
     </section>
@@ -173,30 +263,34 @@
     <!-- Legal Sections -->
     <section class="grid md:grid-cols-2 gap-10">
       <!-- Terms & Conditions -->
-      <div id="terms" class="scroll-mt-20 bg-white p-8 rounded-xl shadow-md border border-gray-100">
+      <div id="terms" class="scroll-mt-20 bg-white p-8 rounded-xl shadow-md border border-gray-100 animate-fade-in" style="animation-delay: 0.3s;">
         <h3 class="text-2xl font-bold text-primary mb-6">Terms & Conditions</h3>
         <div class="prose prose-sm">
-          <p>By using our service you agree to these terms. We provide independent advisory support only.</p>
+          <p>By reaching out to us, you're agreeing to a partnership built on trust. We provide independent advisory support, sharing knowledge like old friends swapping tips.</p>
           <ul class="list-disc pl-5 space-y-2">
-            <li>Service is guidance-based; we cannot access official systems.</li>
-            <li>No guarantees of resolution for all issues.</li>
-            <li>We are not liable for any direct or indirect damages.</li>
-            <li>Governing law: United States.</li>
+            <li>Our guidance is based on experience; we can't guarantee every issue vanishes, but we'll try our best.</li>
+            <li>No access to official systems – we're outsiders offering fresh perspectives.</li>
+            <li>We're not liable for any mishaps; think of us as consultants, not magicians.</li>
+            <li>Payments are straightforward, with refunds where fair – see below.</li>
+            <li>Governing law: United States, keeping things simple and legal.</li>
+            <li>We reserve the right to update these terms as we grow and learn from our community.</li>
           </ul>
           <p class="text-sm text-gray-500 mt-4">Last updated: February 2026</p>
         </div>
       </div>
 
       <!-- Privacy Policy -->
-      <div id="privacy" class="scroll-mt-20 bg-white p-8 rounded-xl shadow-md border border-gray-100">
+      <div id="privacy" class="scroll-mt-20 bg-white p-8 rounded-xl shadow-md border border-gray-100 animate-fade-in" style="animation-delay: 0.6s;">
         <h3 class="text-2xl font-bold text-primary mb-6">Privacy Policy</h3>
         <div class="prose prose-sm">
-          <p>We collect only necessary information to provide support (name, contact, issue description).</p>
+          <p>In a world full of data worries, we keep it human: collect only what's needed to help you, like your name and issue details, treated with utmost respect.</p>
           <ul class="list-disc pl-5 space-y-2">
-            <li>Data used solely for support purposes.</li>
-            <li>We do not sell or share personal information with third parties except as required by law.</li>
-            <li>Secure handling of all data.</li>
-            <li>You may request access or deletion of your data.</li>
+            <li>Use: Solely for solving your problem and improving our service through anonymous insights.</li>
+            <li>Sharing: Never with third parties unless legally required – your story stays with us.</li>
+            <li>Security: Encrypted and protected, like guarding family secrets.</li>
+            <li>Rights: Ask us anytime to see, update, or delete your info – we're transparent.</li>
+            <li>Cookies: Minimal use on our site for better experience, no tracking across the web.</li>
+            <li>Updates: We'll let you know if policies change, keeping the conversation open.</li>
           </ul>
           <p class="text-sm text-gray-500 mt-4">Last updated: February 2026</p>
         </div>
@@ -204,29 +298,31 @@
     </section>
 
     <!-- Refunds -->
-    <section id="refunds" class="scroll-mt-20 bg-white p-10 rounded-2xl shadow-lg">
+    <section id="refunds" class="scroll-mt-20 bg-white p-10 rounded-2xl shadow-lg animate-fade-in" style="animation-delay: 0.9s;">
       <h3 class="text-3xl font-bold text-primary mb-6 text-center">Refunds Policy</h3>
       <div class="prose max-w-3xl mx-auto">
-        <p>We offer refunds in cases where support did not meet reasonable expectations.</p>
+        <p>We believe in fair play – if our help doesn't hit the mark, we're happy to make it right. Life's too short for bad experiences!</p>
         <ul class="list-disc pl-6 space-y-3">
-          <li>Request within 30 days of service.</li>
-          <li>Full refund possible if no meaningful assistance was provided.</li>
-          <li>Partial refunds considered case-by-case.</li>
-          <li>No refunds for resolved issues or user-caused problems outside our control.</li>
+          <li>Eligibility: Within 30 days if the issue persists despite our best efforts.</li>
+          <li>Process: Just tell us your story; we'll review and process refunds quickly, usually in 7-10 days.</li>
+          <li>Full vs. Partial: Full if no progress; partial if some value was provided – we discuss it openly.</li>
+          <li>Exceptions: No refunds for issues beyond our scope or if advice was followed incorrectly.</li>
+          <li>How to Request: Call or email – we're approachable and understanding.</li>
+          <li>Changes: Policies evolve with feedback; check back for the latest.</li>
         </ul>
         <p class="text-sm text-gray-500 mt-6 text-center">Last updated: February 2026</p>
       </div>
     </section>
 
     <!-- Contact / CTA Final -->
-    <section class="text-center py-12 bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl">
+    <section class="text-center py-12 bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl animate-fade-in" style="animation-delay: 1.2s;">
       <h2 class="text-4xl font-bold text-primary mb-6">Ready for Help?</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">Call our support line now for immediate assistance with your SiriusXM radio or app.</p>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Share your story with us – whether it's a quick fix or a deeper dive, our team is excited to assist and get your SiriusXM grooving again.</p>
       <a href="tel:+18336118371"
          class="inline-flex items-center justify-center bg-primary text-white font-bold text-xl px-12 py-6 rounded-xl shadow-xl hover:bg-primaryDark transition transform hover:-translate-y-1 text-center">
         <span class="mr-4 text-3xl">📞</span> Call Now: +1 (833) 611-8371
       </a>
-      <p class="mt-8 text-gray-600">Average hold time under 2 minutes • Available 24/7</p>
+      <p class="mt-8 text-gray-600">Average hold time under 2 minutes • Available 24/7 • Let's chat like friends!</p>
     </section>
 
   </main>
@@ -237,14 +333,14 @@
       <p class="text-lg mb-4 font-semibold">Independent SiriusXM Support</p>
       <p class="mb-2">Phone: <a href="tel:+18336118371" class="text-accent hover:underline">+1 (833) 611-8371</a></p>
       <p class="text-sm mb-6 opacity-80">
-        <strong>Clear Disclaimer:</strong> This is an independent support service. We are not affiliated with SiriusXM, Sirius XM Holdings Inc., or any official brand entity.
+        <strong>Clear Disclaimer:</strong> This is an independent support service. We are not affiliated with SiriusXM, Sirius XM Holdings Inc., or any official brand entity. Our passion is helping you enjoy radio without the stress.
       </p>
       <div class="flex flex-wrap justify-center gap-6 text-sm opacity-80 mb-6">
         <a href="#privacy" class="hover:text-accent transition">Privacy Policy</a>
         <a href="#terms" class="hover:text-accent transition">Terms & Conditions</a>
         <a href="#refunds" class="hover:text-accent transition">Refunds Policy</a>
       </div>
-      <p class="text-sm opacity-70">© 2026 Independent SiriusXM Support. All rights reserved.</p>
+      <p class="text-sm opacity-70">© 2026 Independent SiriusXM Support. All rights reserved. Built with care for music lovers everywhere.</p>
     </div>
   </footer>
 
